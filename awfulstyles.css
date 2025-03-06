@@ -1,0 +1,68 @@
+body{
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: white;
+    color: black;
+}
+canvas {
+    background-color: white;
+}
+p {
+    color: cyan;
+    background-color: magenta;
+    outline-color: yellow;
+    outline: 5px;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.timetable-blank {
+    color:grey;
+}
+.timetable-yellow {
+    background-color:yellow;
+    color: black;
+}
+.timetable-cyan {
+    background-color:cyan;
+    color: black;
+}
+.timetable-orange {
+    background-color:orange;
+    color: black;
+}
+.timetable-lime {
+    background-color:lime;
+    color: black;
+}
+.timetable-blue {
+    background-color: blue;
+    color: white;
+}
+.timetable-magenta {
+    background-color:magenta;
+    color: white;
+}
+.timetable-red {
+    background-color:red;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    table{
+        border-color:white;
+    }
+  
+    th, td{
+        border-color:white;
+    }
+}
