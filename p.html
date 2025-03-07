@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,21 @@
     <link rel="script" href="game.js">
     <title>Document</title>
 </head>
+
 <body>
-    <nav><a href="index.html">Home</a><a href="p.html">I wonder what this button does?</a></nav>
+    <nav>
+        <ul class="navbar">
+            <li><a class="navlink" href="index.html">Home</a></li>
+            <li><a class="activenavlink" href="p.html">I wonder what this button does?</li></a>
+        </ul>
+    </nav>
     <header><a href="index.html">w</a></header>
     <section>
-    <nav><a href="index.html">T</a></nav>
+        <nav><a href="index.html">T</a></nav>
         <article>
-        <h1 style="color: purple;">this is a webpage</h1>
-        <img src="aah.jpg", alt="mess" style="width:640px;height:360px;">
-        <p>what</p>
+            <h1 style="color: purple;">this is a webpage</h1>
+            <img src="aah.jpg" , alt="mess" style="width:640px;height:360px;">
+            <p>what</p>
         </article>
         <aside>
             <p>r</p>
@@ -33,9 +40,9 @@
             ctx.moveTo(0, 180);
             ctx.lineTo(640, 180);
             ctx.stroke();
-            let q = ["This","message","is","randomly","shuffled."];
+            let q = ["This", "message", "is", "randomly", "shuffled."];
             for (let i = q.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i+1));
+                const j = Math.floor(Math.random() * (i + 1));
                 const temp = q[i];
                 q[i] = q[j];
                 q[j] = temp;
@@ -43,6 +50,9 @@
             document.getElementById("q").textContent = q.join(" ");
         </script>
     </section>
-    <footer><p>d</p></footer>
+    <footer>
+        <p>d</p>
+    </footer>
 </body>
+
 </html>

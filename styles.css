@@ -2,15 +2,41 @@ body {
     background-color: white;
     color: black;
 }
-nav {
-    background-color: #0080ff;
-    color: white;
+ul.navbar li {
+    display: inline;
+    float: left;
+}
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;  
 }
 a.navlink{
+    display: block;
     color: white;
-    font-style: normal;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    padding: 5pc;
+}
+a.activenavlink{
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a.navlink:hover{
+    background-color: #111;
+}
+a.activenavlink{
+    background-color: #4080ff;
+}
+a.activenavlink:hover{
+    background-color: #204080;
 }
 @media (prefers-color-scheme: dark) {
     body {
