@@ -1,7 +1,5 @@
 body{
     font-family: 'Comic Sans MS', sans-serif;
-    background-color: white;
-    color: black;
 }
 canvas {
     background-color: white;
@@ -51,18 +49,4 @@ th, td {
 .timetable-red {
     background-color:red;
     color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
-    }
-    table{
-        border-color:white;
-    }
-  
-    th, td{
-        border-color:white;
-    }
 }
