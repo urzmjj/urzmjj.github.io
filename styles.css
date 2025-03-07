@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    color: black;
+    color: #black;
 }
 ul.navbar li {
     display: inline;
@@ -11,7 +11,7 @@ ul.navbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;  
+    background-color: #808080;  
 }
 a.navlink{
     display: block;
@@ -30,7 +30,7 @@ a.activenavlink{
     text-decoration: none;
 }
 a.navlink:hover{
-    background-color: #111;
+    background-color: #404040;
 }
 a.activenavlink{
     background-color: #4080ff;
