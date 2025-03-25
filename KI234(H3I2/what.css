@@ -1,0 +1,57 @@
+body {
+    font-family: "Comic Sans MS";
+    background-color: white;
+    color: black; /*color of creature*/
+}
+h1 {
+    color: red; /*secondary color of creature*/
+    text-align: center;
+}
+ul.navbar li {
+    display: inline;
+    float: left;
+}
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #808080;  
+}
+a.navlink{
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a.activenavlink{
+    display: block;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a.navlink:hover{
+    background-color: #404040;
+}
+a.activenavlink{
+    background-color: #4080ff;
+}
+a.activenavlink:hover{
+    background-color: #204080;
+}
+
+table.gallery{
+    border: none;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+table.gallery tr th, table.gallery tr td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
