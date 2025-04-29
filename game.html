@@ -6,88 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
-        canvas {
-            border:1px solid #808080;
-            background-color: #000000;
+        body {
+            overflow: hidden;
         }
+        #game-canvas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: darkslateblue;
+        }
+        
         </style>
     <title>Document</title>
 </head>
 
-<body onload="startGame()">
+<body>
     <nav>
         <ul class="navbar">
             <li><a class="navlink" href="index.html">Home</a></li>
             <li><a class="navlink" href="p.html">I wonder what this button does?</li></a>
         </ul>
     </nav>
-    <script>
-
-        var player;
-        
-        function startGame() {
-            gameArea.start();
-            player = new component(20, 20, "red", 310, 170);
-        }
-        
-        var gameArea = {
-            canvas : document.createElement("canvas"),
-            start : function() {
-                this.canvas.width = 640;
-                this.canvas.height = 360;
-                this.context = this.canvas.getContext("2d");
-                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-                this.interval = setInterval(updateGameArea, 20);
-                window.addEventListener('keydown', function (e) {
-                    gameArea.keys = (gameArea.keys || []);
-                    gameArea.keys[e.keyCode] = (e.type == "keydown");
-                })
-                window.addEventListener('keyup', function (e) {
-                    gameArea.keys[e.keyCode] = (e.type == "keydown");            
-                })
-            }, 
-            clear : function(){
-                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            }
-        }
-        
-        function component(width, height, color, x, y) {
-            this.gamearea = gameArea;
-            this.width = width;
-            this.height = height;
-            this.speedX = 0;
-            this.speedY = 0;    
-            this.x = x;
-            this.y = y;    
-            this.grounded = 0;
-            this.update = function() {
-                ctx = gameArea.context;
-                ctx.fillStyle = color;
-                ctx.fillRect(this.x - this.width/2, this.y - this.height/2, this.width, this.height);
-            }
-            this.newPos = function() {
-                this.x += this.speedX;
-                this.y += this.speedY;        
-            }    
-        }
-        
-        function updateGameArea() {
-            gameArea.clear();
-            player.speedX *= 0.75;
-            player.speedY *= 0.95;    
-            player.speedY += 0.25;
-            if (gameArea.keys && gameArea.keys[37]) {player.speedX += -1; }
-            if (gameArea.keys && gameArea.keys[39]) {player.speedX += 1; }
-            //if (gameArea.keys && gameArea.keys[40]) {player.speedY += 0.5; }
-            if (gameArea.keys && gameArea.keys[38] && player.grounded) {player.speedY += -10; }
-            if (player.y > 360){player.y = 360; player.speedY = 0;}
-            if (player.y < 0){player.y = 0; player.speedY = 0;}
-            if (player.x < 0){player.x = 0; player.speedX = 0;}
-            if (player.x > 640){player.x = 640; player.speedX = 0;}
-            player.newPos();    
-            player.update();
-        }
-        </script>
+    <canvas id = "game-canvas"></canvas>
+    <script src = "gameScripts/main.js"></script>
+    <script src = "gameScripts/physics.js"></script>
+    <script src = "gameScripts/gameObject.js"></script>
+    <script src="gameScripts/controls.js"></script>
 </body>
 
 </html>
